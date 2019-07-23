@@ -2,7 +2,7 @@ package PreguntasDeExamen2;
 
 public class Pregunta2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] argsv) {
 		/*
 		 ¿Cuál de las siguientes líneas compilará sin advertencia o error?
 			char d = "d";
