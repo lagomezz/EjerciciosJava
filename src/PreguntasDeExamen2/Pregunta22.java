@@ -13,7 +13,7 @@ public class Pregunta22 {
  */
 			  public static void main(String args[]) {
 				   String s = "java2s"; 
-			        s.replace('a', 'Z').trim().concat("Aa"); 
+			       s = s.replace('a', 'Z').trim().concat("Aa"); 
 			        s.substring(0, 2); 
 			        System.out.println(s);// la salida de este codigo es java2s
 			  }
