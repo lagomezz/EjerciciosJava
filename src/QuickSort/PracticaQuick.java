@@ -1,39 +1,51 @@
 package QuickSort;
 
 public class PracticaQuick {
-
-	public static int  Particionar(int[] arreglo,int primero, int ultimo) {
-		// mitad del elemento y colocacion del pivote al final 
-		int objetivo= ((primero+ultimo)/2);  //pivote 
-		arreglo[ultimo] = objetivo;
-		arreglo[objetivo] = ultimo;  
-		for (int i : arreglo) {
-			System.out.print(i+" ");
-		}
-		return objetivo;
-	}
-	public static void Ordenar() {
+	 public static void quickSort(int[] arreglo, int izquierda, int derecha) {
+		    int pivote = arreglo[izquierda]; // se encuantra en pivote // al iual lo estamos usuado como especio en memoria 
+		    int i = izquierda; // pocicion ala izquierda 
+		    int j = derecha; // pocicion final del arreglo
 		
-	}
-	
-	public static void QuickSorte(int[] arreglo,int primero, int ultimo) {// elemento minimo y maximo 
-		
-		int i = primero;
-		int j = ultimo;
-		int aux;
-		
-		 int momory = Particionar(arreglo, primero, ultimo);
-		 System.out.println(".."+momory+"..");
-		while (i>=j) {
-			System.out.println("hola ");
-		} 
-	
-		
-	}
+		    int auxIntercambio;
+		    
+		    while (i < j) {// visitador con el de inicio
+		        while (arreglo[i] <= pivote && i < j) {
+		            i++;
+		        } 
+		        while (arreglo[j] > pivote) {
+		            j--;
+		        }
+		        if (i < j) {       
+		        	//cambio de pocision dentro del arreglo
+		            auxIntercambio = arreglo[i];
+		            arreglo[i] = arreglo[j];
+		            arreglo[j] = auxIntercambio;
+		        }
+		    }	
+		    arreglo[izquierda] = arreglo[j];// mover mi posicionamiento
+		    arreglo[j] = pivote;
+		// metodos recursovos 
+		    if (izquierda < j - 1) {
+		        
+		        quickSort(arreglo, izquierda, j - 1);
+		    }
+		    if (j + 1 < derecha) {
+		     
+		        quickSort(arreglo, j + 1, derecha);
+		    }
+		    }
 	
 	public static void main(String[] args) {
-		int[] arreglo = {3, 3, 2, 1, 4};
-		QuickSorte(arreglo, 0, arreglo.length-1);
+		int[] arreglo = {3,2,4,1,5};
+		System.out.println("este es el arreglo sin ordenar");
+		for(int i : arreglo) {
+			System.out.print(i+" ");
+		}
+		quickSort(arreglo, 0, arreglo.length-1);
+		System.out.println("\neste es el arreglo ordenado");
+		for(int i : arreglo) {
+			System.out.print(i+" ");
+		}
 	}
 
 }
