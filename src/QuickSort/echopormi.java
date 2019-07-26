@@ -20,8 +20,6 @@ public class echopormi {
 		    //mientras que deban evaluarse los elementos en el arreglo
 		    //para ubicar al nuevo pivote
 		    while (i < j) {
-		    	
-		    	
 		        //mientras que el elemento vector[i] sea menor o igual al pivote
 		        //se aumenta el valor de i
 		        //cuando este loop se detenga, el elemento en vector[i]
