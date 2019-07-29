@@ -55,5 +55,23 @@ class Sincronizacion {
         }
     }
 }
-
+/*
+			Explicación del ejemplo
+			
+			Examinemos este programa en detalle. El programa crea tres clases. El primero es SumArray. Contiene el método
+			sumArray(), que suma una matriz de enteros. La segunda clase es MiHilo, que usa un objeto estático de tipo 
+			SumArray para obtener la suma de una matriz de enteros. Este objeto se llama sumarray y como es estático, 
+			solo hay una copia de él compartida por todas las instancias de MiHilo. Finalmente, la clase Sincronizacion
+			crea dos hilos y cada uno calcula la suma de una matriz entera.
+			
+			Dentro de sumArray(), sleep() se usa para permitir deliberadamente que se produzca un cambio de tarea, 
+			si se puede –pero no. Debido a que sumArray() está sincronizado, puede ser utilizado solo por un hilo a 
+			la vez. Por lo tanto, cuando el segundo hilo (hijo) comienza la ejecución, no ingresa sumArray() hasta 
+			después de que el primer hilo secundario haya terminado con él. Esto asegura que se produzca el resultado 
+			correcto.
+			
+			Para comprender completamente los efectos de synchronized, intente eliminarlo de la declaración de 
+			sumArray(). Después de hacer esto, sumArray() ya no está sincronizado, y cualquier cantidad de hiloss 
+			puede usarlo al mismo tiempo.
+ */
 //mas info https://javadesdecero.es/avanzado/sincronizacion-de-hilos/

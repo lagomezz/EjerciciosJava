@@ -22,14 +22,15 @@ public class Fichero {
 			
 			e.printStackTrace();
 		}
-		System.out.println("Sincornizacion terminsda");
+		System.out.println("Sincornizacion Terminada");
 	}
 	
 }
 // se crea una clase la cual extiende de la clase Thread 
 class Hilosvarios extends Thread {
 	// se rescribe la clase run para ejecutar el metodo estar al invocarl la clase 
-	public void run() {
+
+ public synchronized void run() {
 		// se corre un arreglo para que este traiga un arreglos con varios parametros
 		 try {
 			 for (int i = 0; i < 15; i++) {
