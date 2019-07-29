@@ -29,6 +29,23 @@ public class SinThread implements Runnable{
 					 número especificado de nanosegundos, sujeto a la precisión y exactitud de los 
 					 temporizadores y programadores del sistema.
 				 */
+				
+				/*
+				 * Métodos de uso común:
+						void start(): usado para iniciar el cuerpo de la thread definido por el método run().
+						void sleep(): pone a dormir una thread por un  tiempo mínimo especificado.
+						void join(): usado para esperar por el término de la thread sobre la cual el método es invoacado, 
+						por ejemplo por término de método run().
+						void yield(): Mueve a la thread desde el estado de corriendo al final de la cola de procesos en espera 
+						por la CPU.
+						
+						MethodTest.java
+						Java 2 dejó obsoleto (deprecated) varios de estos métodos definidos en versiones previas (Java 1.0 y Java 1.1.) para prevenir inconsistencia de datos y deadlock.  Se recomienda evitar el uso de estos métodos. Ellos son: 
+						void stop() el cual detiene la ejecución de la thread no importando consideración alguna.
+						void  suspend() el cual para detener temporalmente la ejecución de una thread.
+						void resume() reactiva una thread suspendida.
+				 */
+				
 				}
 			} catch (InterruptedException e) {
 			
