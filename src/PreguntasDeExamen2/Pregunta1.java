@@ -13,7 +13,7 @@ public class Pregunta1 {
        No puede acceder a una variable de instancia desde un método estático.
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int i = 2;
 		Pregunta1 s = new Pregunta1();
 
