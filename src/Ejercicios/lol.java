@@ -2,11 +2,11 @@ package Ejercicios;
 
 
 
-public class lol implements lolInterface {
+public class lol extends padrelolyshow implements lolInterface {
 
 	@Override
 	public void claseim() {
-		System.out.println("hola lol");
+		System.out.println(mensaje="lol");
 	
 	}
 
